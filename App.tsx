@@ -9,9 +9,6 @@ import Data from './pages/screens/data';
 import { GoogleSignin } from '@react-native-community/google-signin';
 import auth from "@react-native-firebase/auth"
 
-// import navigation
-import DetailNavigation from "./pages/navigation/DetailNavigation"
-
 const Tab = createBottomTabNavigator()
 
 
@@ -69,11 +66,11 @@ export default function App() {
           )}}
         />
         <Tab.Screen name="Detail" 
-          component={DetailNavigation} 
+          component={MainListNavigation} 
           options={{headerShown:false, tabBarIcon:()=>(<Ionicons 
                     name="list-outline"
                     size={20}/>
-          )}}
+          )}} 
         />
       </Tab.Navigator>
     </NavigationContainer>
